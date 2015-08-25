@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,14 +24,25 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xI9-HU-YQc"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected iPhone Model" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSH-eu-LXh">
+                                <rect key="frame" x="212" y="355.5" width="176" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZKc-Hc-lxI" firstAttribute="top" secondItem="WSH-eu-LXh" secondAttribute="bottom" constant="8" id="6Oq-76-7dc"/>
+                            <constraint firstItem="WSH-eu-LXh" firstAttribute="centerX" secondItem="ZKc-Hc-lxI" secondAttribute="centerX" id="eI1-Iy-raa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZKc-Hc-lxI" secondAttribute="trailing" constant="-20" id="hAG-RC-6A7"/>
                             <constraint firstItem="ZKc-Hc-lxI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="lVr-Kt-FLC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZKc-Hc-lxI" secondAttribute="bottom" id="yWk-Yh-L5t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedItemlabel" destination="WSH-eu-LXh" id="Pyh-f6-xjP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

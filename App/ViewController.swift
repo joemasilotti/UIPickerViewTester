@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var selectedItemlabel: UILabel!
+
     let iPhones = [ "iPhone", "iPhone 3G", "iPhone 3GS", "iPhone 4", "iPhone 4S", "iPhone 5", "iPhone 5C", "iPhone 5S", "iPhone 6", "iPhone 6 Plus" ]
 }
 
@@ -25,5 +27,9 @@ extension ViewController: UIPickerViewDataSource {
 extension ViewController: UIPickerViewDelegate{
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return iPhones[row]
+    }
+
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedItemlabel.text = iPhones[row]
     }
 }
