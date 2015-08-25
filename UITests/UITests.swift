@@ -9,5 +9,10 @@
 import XCTest
 
 class UIPickerViewTesterUITests: XCTestCase {
+    func testPicker() {
+        let app = XCUIApplication()
+        app.launch()
 
+        app.pickerWheels["iPhone 3GS"].tap()
+    }
 }
